@@ -24,8 +24,6 @@ for x in emaUsed:
 	ema = x 
 	df['Ema_' + str(ema)] = round(df.iloc[:,4].ewm(span=ema, adjust = False).mean(),2)
 
-
-
 pos = 0     
 num = 0 
 percentageChanges = []
@@ -62,8 +60,6 @@ for i in df.index:
 
 	num += 1
 
-
-	
 
 #Calculation of summary metrics 
 gains = 0 
@@ -119,9 +115,3 @@ print("Average loss: " + str(int(avgloss)) + "%")
 print("Max Return: " + str(int(maxR)) + "%")
 print("Max Loss: " + str(int(maxL)) + "%")
 print("Total return over " + str(ng+nl) + " trades: " + str(int(totalR*100)) + "%")
-
-
-
-
-
-
