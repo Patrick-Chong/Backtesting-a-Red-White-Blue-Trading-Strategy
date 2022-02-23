@@ -134,7 +134,7 @@ start = dt.datetime(2018,12,1)
 now = dt.datetime.now() 
 
 stock = "AAPL"
-TargetPrice = input("Please enter your stock's target price here: ")
+TargetPrice = int(input("Please enter your stock's target price here: "))
 
 alerted = False
 
