@@ -115,3 +115,70 @@ print("Average loss: " + str(int(avgloss)) + "%")
 print("Max Return: " + str(int(maxR)) + "%")
 print("Max Loss: " + str(int(maxL)) + "%")
 print("Total return over " + str(ng+nl) + " trades: " + str(int(totalR*100)) + "%")
+
+
+#Below is an optional email alert functionality, when price of 'stock' exceeds 'TargetPrice', the user receives an email alert
+
+# import os 
+# import smtplib 
+# import imghdr 
+# from email.message import EmailMessage
+
+# EMAIL_ADDRESS = input("Please enter your email address here: ")
+# EMAIL_PASSWORD = input("Please enter your app's password here: ")
+
+# msg = EmailMessage() 
+
+# yf.pdr_override() 
+# start = dt.datetime(2018,12,1)
+# now = dt.datetime.now() 
+
+# stock = "AAPL"
+# TargetPrice = 43
+
+# alerted = False
+
+# while True: 
+# 	df = pdr.get_data_yahoo(stock,start,now)
+# 	currentClose = df["Adj Close"][-1]
+# 	condition = currentClose > TargetPrice
+
+# 	if condition and not alerted:
+# 		alerted = True
+# 		with smtplib.SMTP('smtp.gmail.com',587) as smtp: 
+# 			smtp.ehlo() 
+# 			smtp.starttls() 
+# 			smtp.ehlo() 
+# 			smtp.login(EMAIL_ADDRESS,EMAIL_PASSWORD)
+# 			subject = "Alert on " + stock 
+# 			body = stock + " Has activated the alert price of " + str(TargetPrice) +\
+# 			"\nCurrent Price: " + str(currentClose)
+
+# 			msg = f'Subject: {subject}\n\n{body}'
+			
+# 			smtp.sendmail(EMAIL_ADDRESS,'kahwaichong78@gmail.com',msg)
+
+
+# 	else: 
+# 		print("no new alerts")
+
+
+#N.B. only one email alert is sent to the user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
