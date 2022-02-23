@@ -117,7 +117,7 @@ print("Max Loss: " + str(int(maxL)) + "%")
 print("Total return over " + str(ng+nl) + " trades: " + str(int(totalR*100)) + "%")
 
 
-#Below is an optional email alert functionality, when price of 'stock' exceeds 'TargetPrice', the user receives an email alert
+#Below is an email alert functionality, such that when price of 'stock' exceeds a desired 'TargetPrice', the user receives an email alert
 
 import os 
 import smtplib 
@@ -163,7 +163,6 @@ while True:
 		print("no new alerts")
 
 
-#N.B. only one email alert is sent to the user
 
 
 
