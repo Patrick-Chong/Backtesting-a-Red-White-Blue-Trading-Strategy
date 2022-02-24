@@ -1,0 +1,9 @@
+Python==3.9.7
+Sqlalchemy==1.4.27
+pandas==1.4.1
+numpy==1.20.3
+yfinance==0.1.70
+Pandas-datareader==0.10.0
+matplotlib==3.5.1
+Python-binance==1.0.15
+pandas-datareader==0.10.0
